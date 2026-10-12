@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lab1/menu_page.dart';
+import 'package:lab1/pages/menu_page.dart';
+import 'package:lab1/pages/profile_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -35,7 +36,12 @@ class HomePage extends StatelessWidget {
               backgroundColor: Colors.white,
               child: Icon(Icons.person, color: Colors.blue),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ProfilePage()),
+              );
+            },
           ),
         ],
         bottom: PreferredSize(
